@@ -12,12 +12,18 @@ The requirement of this project was :
 ### Automatic Deploy
 I used Vercel to automatically create the repo and deploy this app (button just under this section)
 Like that the pre config of the project is set and it's already in production.
+Moreover, with Vercel, ou have a preview system on you project for each time you push to your main branch and this preview will take the place of a pre-prod server for you to check if your features work as expected. 
 
 ### Add Unit Tests
 Since it's a Next.js project, i used `jest` and `react testing library` to test a component of the app
 I just wanted to show a simple test so i didn't choose a too complex components that may require mock or more complex testing.
 
 You can see this test under the folder `__test__` on the root of the project.
+
+the command to run the test is simply : 
+```bash
+jest
+```
 
 ### Non Regression
 Now that the unit tests are set up i can add non regression to the project by adding the execution of tests before the `build` on the commands in the `package.json` file.
@@ -28,6 +34,13 @@ Like that if the tests failed, the app is not build and send to the vercel produ
 ### End To End tests
 I choose playwright for the End To End tests, it's a really effective and easy to set up tool.
 Following the doc, i initialized it and test a simple user story (show a film detail).
+
+You can see this test under the folder `EndToEnd` on the root of the project.
+
+To run the playwright test you can run : 
+```bash
+npx playwright test
+```
 
 ### Monitoring
 To monitor the app i created and linked a Sentry project. The setup is easy enough but to have a really effective configuration it take some times and a bit of practice. 
