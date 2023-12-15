@@ -44,6 +44,9 @@ npx playwright test
 
 ### Monitoring
 To monitor the app i created and linked a Sentry project. The setup is easy enough but to have a really effective configuration it take some times and a bit of practice. 
+Here is a screenshot of the dashboard :
+<img width="900" alt="image" src="https://github.com/Boyadjie/xata-search/assets/72607059/0e02b227-a3c0-41dd-83d5-e81fea1c1280">
+
 
 ---------
 
