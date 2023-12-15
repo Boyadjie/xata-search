@@ -46,7 +46,11 @@ dist.css
 .xatarc
 
 .idea/
+.swc/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Sentry Config File
+.sentryclirc
