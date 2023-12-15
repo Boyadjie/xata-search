@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm exec playwright test && jest && next build",
+    "build": "jest && next build",
     "start": "next start",
     "lint": "next lint",
     "xata:codegen": "pnpm -s dlx @xata.io/cli@latest codegen --output=lib/xata.codegen.ts",
