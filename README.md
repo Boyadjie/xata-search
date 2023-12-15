@@ -1,3 +1,42 @@
+# Requirements :
+
+The requirement of this project was :
+- Automatic deploy
+- Add unit test with an example
+- Add non regression
+- Add End to End testing
+- Monitor the app
+
+# What i've done :
+
+### Automatic Deploy
+I used Vercel to automatically create the repo and deploy this app (button just under this section)
+Like that the pre config of the project is set and it's already in production.
+
+### Add Unit Tests
+Since it's a Next.js project, i used `jest` and `react testing library` to test a component of the app
+I just wanted to show a simple test so i didn't choose a too complex components that may require mock or more complex testing.
+
+You can see this test under the folder `__test__` on the root of the project.
+
+### Non Regression
+Now that the unit tests are set up i can add non regression to the project by adding the execution of tests before the `build` on the commands in the `package.json` file.
+Like that if the tests failed, the app is not build and send to the vercel production.
+
+/!\ There was an issue with the NR and the End To End tests that were in conflict. The thing is that if you want end to end test using playwright or other tools, it's hard to do with vercel. You will need to create your own prod and pre-prod servers because vercel have also it's limitations and own usages.
+
+### End To End tests
+I choose playwright for the End To End tests, it's a really effective and easy to set up tool.
+Following the doc, i initialized it and test a simple user story (show a film detail).
+
+### Monitoring
+To monitor the app i created and linked a Sentry project. The setup is easy enough but to have a really effective configuration it take some times and a bit of practice. 
+
+---------
+
+
+
+
 <a href="https://xmdb.vercel.app" target="_blank">
   <img src="/public/xmdb-hero@2x.png" alt="Xata and XMDB logo" />
 </a>
